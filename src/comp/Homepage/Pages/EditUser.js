@@ -51,7 +51,7 @@ export default function EditUser({ id }) {
 
             <div className="modal-body">
               {loader ? (
-                <Loader />
+                <h6 className="text-success">Loading...</h6>
               ) : error ? (
                 <AlertStatus status={"danger"} msg={error} />
               ) : (
