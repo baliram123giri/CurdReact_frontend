@@ -36,3 +36,35 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* //mystyle start  */
+
+.pink_light{
+  background-color: #243d25a6;
+  color: #fff !important;
+}
+.loader{
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.loader .box{
+  width: 100px;
+  margin: auto;
+}
+.table-wrap {
+  overflow-x: scroll;
+}
+@media only screen and (max-width: 768px) {
+   .btn-sm {
+     width: 100%;
+   }
+}
