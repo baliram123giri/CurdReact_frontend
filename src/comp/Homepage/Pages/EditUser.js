@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getSingleUser, updateUser } from "../../../redux/actions/user";
 import AlertStatus from "../../error/AlertStatus";
-import Loader from "../../Loading/Loader";
 
 export default function EditUser({ id }) {
   //state area
-  console.log(id);
+
   const [userData, setUserData] = useState({});
   const { user, error, loader} = useSelector((state) => state);
+
   const dispatch = useDispatch();
   useEffect(() => {
     if (id) {

@@ -24,18 +24,17 @@ export const getUsers = () => async (dispatch) => {
   dispatch(loaderHandler());
   try {
     const result = await axios.get(`${config.URL}/api/users`);
-    console.log(result);
+
     if (result.status === 200) {
       dispatch(successHandler(null));
       dispatch({ type: types.GET_USERS, payload: result.data });
     }
   } catch (error) {
     const msg = !error.message ? error.response.data.msg : error.message;
-    console.log(msg);
+
     dispatch(errorHandler(msg));
   }
 };
-
 
 //get sigle users
 export const getSingleUser = (id) => async (dispatch) => {
@@ -48,11 +47,10 @@ export const getSingleUser = (id) => async (dispatch) => {
     }
   } catch (error) {
     const msg = !error.message ? error.response.data.msg : error.message;
-    console.log(msg);
+
     dispatch(errorHandler(msg));
   }
 };
-
 
 //delete user
 export const deleteUser = (id) => async (dispatch) => {
